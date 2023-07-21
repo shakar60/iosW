@@ -20,13 +20,32 @@ Title = "Script Loaded";
 Text = "Changed By shakar#6955",
 Duration = 6
 })
-getgenv().keytoclick = "Q"
+ggetgenv().keytoclick = "Q"
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
-tool.Name = "iosW"
+tool.Name = keytoclick
 tool.Activated:connect(function()
-local vim = game:service("VirtualInputManager")
+    local vim = game:service("VirtualInputManager")
 vim:SendKeyEvent(true, keytoclick, false, game)
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Notification!";
+    Text = "Made By shakar#6955";
+
+})
+
+local player = game.Players.LocalPlayer
+
+local function connectCharacterAdded()
+    player.CharacterAdded:Connect(onCharacterAdded)
+end
+
+connectCharacterAdded()
+
+player.CharacterRemoving:Connect(function()
+    tool.Parent = game.Players.LocalPlayer.Backpack
 end)
 return
 end
