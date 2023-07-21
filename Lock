@@ -1,3 +1,4 @@
+-- @scripthubv2 / @scripts
 local configs = {
 main = {
 enabled = true,
@@ -16,37 +17,30 @@ markersize = UDim2.new(0.5, 0, 0.5, 0.2) -- Marker Size
 }
 }
 game.StarterGui:SetCore("SendNotification", {
-Title = "Script Loaded";
-Text = "Changed By shakar#6955",
+Title = "join discord server for more exploits";
+Text = "https://discord.gg/productions",
 Duration = 6
 })
-ggetgenv().keytoclick = "Q"
+game.StarterGui:SetCore("SendNotification", {
+Title = "join discord server for more exploits";
+Text = "https://discord.gg/productions",
+Duration = 6
+})
+getgenv().keytoclick = "Q"
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
-tool.Name = keytoclick
+tool.Name = "iosW"
 tool.Activated:connect(function()
-    local vim = game:service("VirtualInputManager")
+local vim = game:service("VirtualInputManager")
 vim:SendKeyEvent(true, keytoclick, false, game)
 end)
-tool.Parent = game.Players.LocalPlayer.Backpack
-
+tool.Parent = game.Players.LocalPlayer.Backpack 
+if getgenv().detector8383 then
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Notification!";
-    Text = "Made By shakar#6955";
-
+Title = "join discord server for more exploits";
+Text = "https://discord.gg/productions",
+Duration = 6
 })
-
-local player = game.Players.LocalPlayer
-
-local function connectCharacterAdded()
-    player.CharacterAdded:Connect(onCharacterAdded)
-end
-
-connectCharacterAdded()
-
-player.CharacterRemoving:Connect(function()
-    tool.Parent = game.Players.LocalPlayer.Backpack
-end)
 return
 end
 pcall(function() getgenv().detector8383 = true end)
