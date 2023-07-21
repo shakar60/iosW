@@ -1,4 +1,3 @@
--- @scripthubv2 / @scripts
 local configs = {
 main = {
 enabled = true,
