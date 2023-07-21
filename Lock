@@ -1,3 +1,4 @@
+-- @scripthubv2 / @scripts
 local configs = {
 main = {
 enabled = true,
@@ -16,8 +17,13 @@ markersize = UDim2.new(0.5, 0, 0.5, 0.2) -- Marker Size
 }
 }
 game.StarterGui:SetCore("SendNotification", {
-Title = "Script Loaded";
-Text = "Changed By shakar#6955",
+Title = "join discord server for more exploits";
+Text = "https://discord.gg/productions",
+Duration = 6
+})
+game.StarterGui:SetCore("SendNotification", {
+Title = "join discord server for more exploits";
+Text = "https://discord.gg/productions",
 Duration = 6
 })
 getgenv().keytoclick = "Q"
@@ -56,10 +62,23 @@ end
 getgenv().DONT_DELETE = true
 local Plr
 Mouse.KeyDown:Connect(function(KeyPressed)
+if KeyPressed == (configs.main.aimlockkey) then
+if configs.main.enabled == true then
+configs.main.enabled = false
+if configs.main.notifications == true then
+Plr = FindClosestUser()
+game.StarterGui:SetCore("SendNotification", {
+Title = ".gg/productions",
+Text = ""
 })
 end
 else
 Plr = FindClosestUser()
+configs.main.enabled = true
+if configs.main.notifications == true then
+game.StarterGui:SetCore("SendNotification", {
+Title = "iosscripts",
+Text = "" .. tostring(Plr.Character.Humanoid.DisplayName)
 })
 end
 end
